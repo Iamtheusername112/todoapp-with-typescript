@@ -35,9 +35,12 @@ const App: React.FC = () => {
       return;
     }
 
-    let add;
+    // Use const for active and complete since they are not reassigned
     const active = todos;
     const complete = CompletedTodos;
+
+    let add;
+
     // Source Logic
     if (source.droppableId === "TodosList") {
       add = active[source.index];
